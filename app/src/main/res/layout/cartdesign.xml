@@ -34,12 +34,20 @@
                     android:text="Cart"
                     android:textColor="@color/white"
                     android:textSize="30dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="15dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     app:cardBackgroundColor="#533F3F"
                     app:cardCornerRadius="30dp"
+                    android:padding="10dp"
                     android:layout_marginTop="10dp">
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -51,6 +59,7 @@
                             android:layout_height="wrap_content"
                             android:src="@drawable/cofee3"
                             android:layout_weight="1.1"
+                            android:scaleType="centerCrop"
                             app:shapeAppearanceOverlay="@style/RoundedSquare" />
 
                         <LinearLayout
@@ -120,6 +129,7 @@
                     android:layout_height="100dp"
                     app:cardBackgroundColor="#533F3F"
                     app:cardCornerRadius="30dp"
+                    android:padding="10dp"
                     android:layout_marginTop="10dp">
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -129,8 +139,9 @@
                         <com.google.android.material.imageview.ShapeableImageView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/cofee3"
+                            android:src="@drawable/coffee6"
                             android:layout_weight="1.1"
+                            android:scaleType="centerCrop"
                             app:shapeAppearanceOverlay="@style/RoundedSquare" />
 
                         <LinearLayout
@@ -143,14 +154,14 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Cappucino"
+                                android:text="Americano"
                                 android:textSize="20dp"
                                 android:textColor="@color/white"
                                 android:fontFamily="serif"/>
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Dalgona Macha"
+                                android:text="Chocolate"
                                 android:textSize="15dp"
                                 android:textColor="@color/white"
                                 android:fontFamily="serif"/>
@@ -198,6 +209,7 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
+                    android:padding="10dp"
                     app:cardBackgroundColor="#533F3F"
                     app:cardCornerRadius="30dp"
                     android:layout_marginTop="10dp">
@@ -206,11 +218,13 @@
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:weightSum="3">
+
                         <com.google.android.material.imageview.ShapeableImageView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/cofee3"
                             android:layout_weight="1.1"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/coffee5"
                             app:shapeAppearanceOverlay="@style/RoundedSquare" />
 
                         <LinearLayout
@@ -223,14 +237,14 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Cappucino"
+                                android:text="Flat White"
                                 android:textSize="20dp"
                                 android:textColor="@color/white"
                                 android:fontFamily="serif"/>
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Dalgona Macha"
+                                android:text="Roasted Beans"
                                 android:textSize="15dp"
                                 android:textColor="@color/white"
                                 android:fontFamily="serif"/>
@@ -276,86 +290,6 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    app:cardBackgroundColor="#533F3F"
-                    app:cardCornerRadius="30dp"
-                    android:layout_marginTop="10dp">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:weightSum="3">
-                        <com.google.android.material.imageview.ShapeableImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/cofee3"
-                            android:layout_weight="1.1"
-                            app:shapeAppearanceOverlay="@style/RoundedSquare" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:layout_gravity="center"
-                            android:paddingLeft="25dp"
-                            android:layout_weight="0.9">
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Cappucino"
-                                android:textSize="20dp"
-                                android:textColor="@color/white"
-                                android:fontFamily="serif"/>
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Dalgona Macha"
-                                android:textSize="15dp"
-                                android:textColor="@color/white"
-                                android:fontFamily="serif"/>
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="229"
-                                android:drawableLeft="@drawable/baseline_currency_rupee_24"
-                                android:textSize="18dp"
-                                android:layout_gravity="center_horizontal"
-                                android:textColor="@color/white"
-                                android:fontFamily="serif"/>
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:layout_gravity="center"
-                            android:weightSum="3">
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="40dp"
-                                android:layout_weight="1"
-                                android:src="@drawable/baseline_indeterminate_check_box_24"
-                                android:gravity="center"/>
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="1"
-                                android:paddingLeft="10dp"
-                                android:textSize="25dp"
-                                android:layout_weight="1"
-                                android:textColor="@color/white"/>
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="40dp"
-                                android:layout_weight="1"
-                                android:src="@drawable/baseline_add_box_24"/>
-
-
-
-                        </LinearLayout>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
 
 
                 <LinearLayout
@@ -371,7 +305,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:padding="10dp">
+                        android:layout_marginTop="5dp"
+                        android:padding="15dp">
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
@@ -483,6 +418,9 @@
 
 
 
+
+
+                </LinearLayout>
                 </LinearLayout>
 
 

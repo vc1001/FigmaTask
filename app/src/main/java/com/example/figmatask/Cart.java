@@ -30,7 +30,8 @@ public class Cart extends Fragment {
         View rootview =inflater.inflate(R.layout.fragment_cart, container, false);
 
         modelList = generateModel();
-        recyclerView = rootview.findViewById(R.id.recyclerview);
+        recyclerView = rootview.findViewById(R.id.recycleview);
+       // LinearLayoutManager linearLayoutManager = new LinearLayoutManager(null, LinearLayoutManager.HORIZONTAL,false);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         customAdapter =new CustomAdapter(modelList);
         recyclerView.setAdapter(customAdapter);

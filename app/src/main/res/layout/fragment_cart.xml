@@ -1,170 +1,168 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-    android:background="@color/black"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-tools:context=".Cart">
-
-<androidx.appcompat.widget.LinearLayoutCompat
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="5dp"
-    android:orientation="vertical"
-    android:layout_marginTop="10dp"
-    android:layout_marginBottom="40dp">
+    android:background="@color/brown"
+    tools:context=".Cart">
 
-    <androidx.cardview.widget.CardView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/brown"
-        app:cardCornerRadius="30dp">
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:orientation="vertical">
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cart"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30dp">
+        </TextView>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Cart"
-                android:textSize="30dp"
-                android:textColor="@color/white"
-                android:gravity="center"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:paddingTop="15dp"/>
-
+            android:layout_height="450dp"
+            android:paddingTop="15dp">
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleview"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/recyclerview"
-                android:padding="10dp"/>
+                android:layout_height="match_parent">
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:src="@drawable/drawable_dotted_line">
+
+            </ImageView>
+
+
+
+    </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <ImageView
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="5dp"
-                    android:src="@drawable/drawable_dotted_line"
-                    android:layerType="software"/>
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="#578C5252"
+                    app:cardCornerRadius="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Apply Coupon Code"
+                        android:gravity="center"
+                        android:textSize="25dp"
+                        android:fontFamily="serif"
+                        android:textColor="@color/white"/>
+                </androidx.cardview.widget.CardView>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="10dp">
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp"
+                    android:weightSum="1">
 
-                    <androidx.cardview.widget.CardView
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:cardBackgroundColor="#578C5252"
-                        app:cardCornerRadius="20dp">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Apply Coupon Code"
-                            android:gravity="center"
-                            android:textSize="25dp"
-                            android:fontFamily="serif"
-                            android:textColor="@color/white"/>
-                    </androidx.cardview.widget.CardView>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:paddingTop="10dp"
-                        android:weightSum="1">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Delivery Charges"
-                            android:textSize="20dp"
-                            android:textColor="@color/white"
-                            android:layout_weight="0.3"
-                            android:fontFamily="serif"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="49"
-                            android:drawableLeft="@drawable/baseline_currency_rupee_24"
-                            android:textColor="@color/white"
-                            android:textSize="20dp"
-                            android:layout_weight="0.7"/>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_weight="1"
-                        android:paddingTop="10dp">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Taxes"
-                            android:textSize="20dp"
-                            android:textColor="@color/white"
-                            android:layout_weight="0.3"
-                            android:fontFamily="serif"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="64.87"
-                            android:drawableLeft="@drawable/baseline_currency_rupee_24"
-                            android:textColor="@color/white"
-                            android:textSize="20dp"
-                            android:layout_weight="0.7"/>
-                    </LinearLayout>
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/drawable_dotted_line"
-                        android:layerType="software"/>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_weight="1"
-                        android:paddingTop="10dp">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Grand Total"
-                            android:textStyle="bold"
-                            android:textSize="20dp"
-                            android:textColor="@color/white"
-                            android:layout_weight="0.3"
-                            android:fontFamily="serif"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="1009.87"
-                            android:drawableLeft="@drawable/baseline_currency_rupee_24"
-                            android:textColor="@color/white"
-                            android:textSize="20dp"
-                            android:layout_weight="0.7"/>
-                    </LinearLayout>
-
-                    <Button
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Pay Now"
-                        android:textStyle="bold"
-                        android:layout_marginTop="10dp"
-                        android:backgroundTint="#A4FAD392"
+                        android:text="Delivery Charges"
                         android:textSize="20dp"
+                        android:textColor="@color/white"
+                        android:layout_weight="0.3"
                         android:fontFamily="serif"/>
-
-
-
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="49"
+                        android:drawableLeft="@drawable/baseline_currency_rupee_24"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        android:layout_weight="0.7"/>
                 </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:paddingTop="10dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Taxes"
+                        android:textSize="20dp"
+                        android:textColor="@color/white"
+                        android:layout_weight="0.3"
+                        android:fontFamily="serif"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="64.87"
+                        android:drawableLeft="@drawable/baseline_currency_rupee_24"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        android:layout_weight="0.7"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/drawable_dotted_line"
+                    android:layerType="software"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Grand Total"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:textColor="@color/white"
+                        android:layout_weight="0.3"
+                        android:fontFamily="serif"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="1009.87"
+                        android:drawableLeft="@drawable/baseline_currency_rupee_24"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        android:layout_weight="0.7"/>
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pay Now"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#A4FAD392"
+                    android:textSize="20dp"
+                    android:fontFamily="serif"/>
 
 
 
@@ -173,12 +171,20 @@ tools:context=".Cart">
 
 
         </LinearLayout>
-    </androidx.cardview.widget.CardView>
-</androidx.appcompat.widget.LinearLayoutCompat>
+</LinearLayout>
 
 
 
 
-</FrameLayout>
+
+
+
+
+
+
+
+
+
+
 
 
